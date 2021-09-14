@@ -5,12 +5,12 @@
 #lbl {
     font-family: monospace;
     font-size: xx-large;
-    color: #626262;
+    color: #fffcee;
     padding: 5px;
-    border: 1px solid #ececec;
     text-align: center;
     line-height: 1.5;
-    height:85%
+    height:85%;
+    text-shadow: 10px;
 
 
 }
@@ -18,7 +18,7 @@
     font-size:large;
 }
 body{
-    background-color: #FFCECE;
+    background-color: #fdb3b3;
 }
     </style>
 </head>
@@ -56,7 +56,7 @@ body{
     var dayOfWeek = weekday[today.getDay()];
     var month = monthName[today.getMonth()];
     
-    var date = dayOfWeek+" " + month + " " + today.getDay() + ", " + today.getFullYear()  ;
+    var date = dayOfWeek + " " + month + " " + today.getDay() + ", " + today.getFullYear()  ;
 
     var greet;
 
@@ -68,6 +68,6 @@ body{
         greet = 'Good Evening,  ';
 
     document.getElementById('lbl').innerHTML =
-          greet+= "Kenzie" +`<div id="date"> It's ${date}</div>`;
+          greet+= "Kenzie" +`<div id="date">${date}</div>`;
 </script> 
 </html>
