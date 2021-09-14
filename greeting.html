@@ -35,21 +35,37 @@ body{
     weekday[4] = "Thursday";
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
+    
+    var monthName = new Array(12);
+    monthName[0] = "January";
+    monthName[1] = "February";
+    monthName[2] = "March";
+    monthName[3] = "April";
+    monthName[4] = "May";
+    monthName[5] = "June";
+    monthName[6] = "July";
+    monthName[7] = "August";
+    monthName[8] = "September";
+    monthName[9] = "October";
+    monthName[10] = "November";
+    monthName[11] = "December";
 
     
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
+    var month = monthName[today.getMonth()];
+    
+    var date = dayOfWeek+" " + month + " " + today.getDay() + ", " + today.getFullYear()  ;
 
     var greet;
 
     if (hrs < 12)
-        greet = 'Good Morning  ';
+        greet = 'Good Morning,  ';
     else if (hrs >= 12 && hrs <= 17)
-        greet = 'Good Afternoon ';
+        greet = 'Good Afternoon, ';
     else if (hrs >= 17 && hrs <= 24)
-        greet = 'Good Evening  ';
+        greet = 'Good Evening,  ';
 
     document.getElementById('lbl').innerHTML =
           greet+= "Kenzie" +`<div id="date"> It's ${date}</div>`;
