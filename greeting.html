@@ -40,16 +40,11 @@ h1 {
 .card {
     padding: 10px 25px 10px 25px;
     border-radius: 10px;
-    background: #F6C6BD;
+    background: #6d4c41;
     width: 85vw;
     color: #fff;
     display: inline-block;
     box-shadow: 2px 2px 1px 0px #330835;
-}
-
-.card:hover {
-    margin-top: 2px;
-    box-shadow: none;
 }
 
 .clock {
@@ -61,7 +56,7 @@ h1 {
 
 .time {
     display: inline;
-    min-width: 37px;
+    min-width: 25px;
 }
 
 .colon {
@@ -71,7 +66,7 @@ h1 {
 
 .date {
     display: inline;
-    min-width: 162px;
+    min-width: 100px;
     font-family: 'Courier';
     font-size: 20px;
     padding-right: 30px;
@@ -127,11 +122,11 @@ else{
 }
 hrs = today.getHours();
 if (hrs < 12)
-        greet = 'Good Morning, Kenzie  ';
+        greet = 'Good morning!';
     else if (hrs >= 12 && hrs <= 17)
-        greet = 'Good Afternoon, Kenzie ';
+        greet = 'Good afternoon!';
     else if (hrs >= 17 && hrs <= 24)
-        greet = 'Good Evening, Kenzie  ';
+        greet = 'Good evening!';
 // console.log(today.toLocaleTimeString());
 document.getElementById('greet').innerHTML = greet;
 document.getElementById('hour').innerHTML = hour;
